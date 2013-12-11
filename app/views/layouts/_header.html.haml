@@ -1,0 +1,31 @@
+%header.full-width
+  .row
+    .small-12.columns
+      %nav.top-bar
+        %ul.title-area
+          %li.name
+            %h1
+              -if user_signed_in?
+                = link_to image_tag('logo.jpg', :alt => 'cor.to'), :authenticated_root, :title => t('header.home', :default => 'Home')
+              -else
+                = link_to image_tag('logo.jpg', :alt => 'cor.to'), :unauthenticated_root, :title => t('header.home', :default => 'Home')
+          %li.toggle-topbar.menu-icon
+            = link_to '#', :title => t('header..menu', :default => 'Menu') do
+              %span 
+                = t('header.menu', :default => 'Menu')
+        %section.top-bar-section
+          %ul.right
+            - if user_signed_in?
+              %li{ :class => ('active' if params[:controller] == 'links') }
+                = link_to t('header.links', :default => 'Links'), links_path
+              %li{ :class => ('active' if current_page?(edit_user_registration_path)) }
+                = link_to t('header.user', :default => 'User'), edit_user_registration_path
+              %li
+                = link_to t('header.close', :default => 'Close'), destroy_user_session_path, :method => 'delete'
+            - else
+              %li{ :class => ('active' if current_page?(:unauthenticated_root)) }
+                = link_to t('header.start', :default => 'Home'), :unauthenticated_root
+              %li{ :class => ('active' if current_page?(new_user_session_path)) }
+                = link_to t('header.sign_in', :default => 'Sign in'), new_user_session_path
+              %li{ :class => ('active' if current_page?(new_user_registration_path)) }
+                = link_to t('header.sign_up', :default => 'Sign up'), new_user_registration_path

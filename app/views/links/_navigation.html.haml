@@ -1,0 +1,10 @@
+.panel
+  %ul.side-nav
+    %li{ :class => ('active' if current_page?(new_link_path)) }
+      = link_to_unless_current t('.new', :default => 'Shorten'), new_link_path
+    %li{ :class => ('active' if current_page?(links_path) or current_page?(:authenticated_root)) }
+      = link_to_unless_current t('.list', :default => 'List'), links_path
+    %li{ :class => ('active' if current_page?(search_links_path))  }
+      = link_to_unless_current t('.search', :default => 'Search'), search_links_path
+    %li{ :class => ('active' if current_page?(favorites_links_path)) }
+      = link_to_unless_current t('.fav', :default => 'Favorites'), favorites_links_path

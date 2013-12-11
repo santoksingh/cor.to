@@ -1,0 +1,14 @@
+%footer#footer.footer-area.full-width
+  .row
+    .small-12.small-centered.columns
+      .centered
+        %span.copyright
+          2013 © Corto Inc.
+        %span.languages
+          = fa_icon 'flag', :class => 'fa-lg'
+          = link_to_unless_current 'Español', :locale => 'es'
+          ·
+          = link_to_unless_current 'English', :locale => 'en'
+        %span.credits
+          = fa_icon 'html5', :class => 'fa-lg'
+          = fa_icon 'css3',  :class => 'fa-lg'

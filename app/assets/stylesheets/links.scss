@@ -1,0 +1,29 @@
+$btn-link-color   : #334;
+$btn-nolink-color : #b9b9b9;
+$pagination-bg    : #2ba8cb;
+
+.title, .content {
+    overflow : hidden;
+    padding  : 3px;
+}
+
+.description {
+    text-align: justify;
+    padding: 10px 10px 0 10px;
+    font-size: 0.9em;
+}
+
+i.icon-gray { color : $btn-nolink-color; }
+a > i.fa { color : $btn-link-color; }
+
+li > a:hover > i.fa {
+    -webkit-animation-name : pulse;
+    -moz-animation-name    : pulse;
+    -ms-animation-name     : pulse;
+    -o-animation-name      : pulse;
+    animation-name         : pulse;
+}
+
+ul.pagination li.current a { background : $pagination-bg; }
+
+textarea { height: 150px; }

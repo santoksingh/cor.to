@@ -1,0 +1,42 @@
+.row
+  .small-10.small-centered.columns
+    = text_field_tag "in_url",
+      @base + link.in_url,
+      :onclick => 'this.select();'
+.row
+  .small-12.large-8.small-centered.columns
+    .small-block-grid-5.centered
+      %li.animated
+        = link_to fa_icon('external-link', :class => 'fa-2x animated'),
+          @base + link.in_url,
+          :class  => 'link',
+          :target => '_blank'
+      - if not current_page?(link_path(link))
+        %li.animated
+          = link_to fa_icon('bar-chart-o', :class => 'fa-2x animated'),
+            link
+      - else
+        %li.animated
+          = fa_icon('bar-chart-o', :class => 'fa-2x animated icon-gray')
+      %li.animated
+        = link_to fa_icon('pencil-square-o', :class => 'fa-2x animated'),
+          edit_link_path(link)
+      %li.animated
+        - if link.favorited
+          = link_to fa_icon('heart-o', :class => 'fa-2x animated'),
+            unfavorite_link_path(link),
+            :method => :patch
+        - else
+          = link_to fa_icon('heart', :class => 'fa-2x animated'),
+            favorite_link_path(link),
+            :method => :patch
+      %li.animated
+        = link_to fa_icon('trash-o', :class => 'fa-2x animated'),
+          link,
+          :data   => { :confirm => t('.are_you_sure', :default => 'Are you sure?') },
+          :method => :delete
+  - if not link.description.blank?
+    .row
+      .small-12.columns
+        %p.description
+          = highlight(link.description, @highlight)

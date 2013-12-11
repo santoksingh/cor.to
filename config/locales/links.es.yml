@@ -1,0 +1,48 @@
+es:
+  links:
+    create_ok                 : "Tu enlace ha sido cortado correctamente"
+    update_ok                 : "Tu enlace ha sido actualizado correctamente"
+    favorite_ok               : "El enlace ha sido añadido a favoritos"
+    unfavorite_ok             : "El enlace ha sido borrado de favoritos"
+    not_url_err               : "Dirección URL incorrecta"
+    not_found_err             : "El enlace solicitado no ha sido encontrado"
+    link_info:
+      are_you_sure            : "¿Estás seguro?"
+    navigation:
+      new                     : "Cortar"
+      list                    : "Listado"
+      search                  : "Búsqueda"
+      fav                     : "Favoritos"
+    index:
+      title                   : "Tus enlaces cortados"
+    favorites:
+      title                   : "Tus enlaces favoritos"
+    new:
+      title                   : "Nuevo enlace"
+      link_url                : "Dirección"
+      link_title              : "Título"
+      link_title_placeholder  : "Escribe aquí tu título"
+      link_descr              : "Descripción"
+      link_descr_placeholder  : "Escribe aquí una descripción sobre el enlace"
+      new_link                : "Cortar"
+    edit:
+      title                   : "Editar enlace"
+      link_title              : "Escribe aquí tu título"
+      link_title              : "Título"
+      link_title_placeholder  : "Escribe aquí tu título"
+      link_descr              : "Descripción"
+      link_descr_placeholder  : "Escribe aquí una descripción sobre el enlace"
+      edit_link               : "Actualizar"
+      back_link               : "Cancelar"
+    search:
+      title                   : "Buscar enlaces"
+      link_search_placeholder : "Términos de búsqueda"
+      search                  : "Buscar"
+    show:
+      no_clicks_yet           : "Nadie ha visitado aún tu enlace, ¡compártelo ahora!"
+      last_week               : "Clicks durante la última semana"
+      last_month              : "Clicks durante el último mes"
+      last_year               : "Clicks durante el último año"
+      browser                 : "Navegadores de visitantes"
+      country                 : "Países de visitantes"
+      referer                 : "Webs de origen"

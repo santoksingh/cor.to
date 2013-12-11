@@ -1,0 +1,31 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'scissors', :text => t('.title', :default => 'New link')
+    %hr
+
+.row
+  .large-10.push-2.columns
+    = form_for @link do |f|
+      %div
+        = f.text_field :out_url,
+          :label => t('.link_url', :default => 'Link URL'),
+          :placeholder => t('.link_url_placeholder', :default => 'http://cor.to'),
+          :required => true
+      %div
+        = f.text_field :title,
+          :label => t('.link_title', :default => 'Link title'),
+          :placeholder => t('.link_title_placeholder', :default => 'Awesome link!')
+      %div
+        = f.text_area :description,
+          :label => t('.link_descr', :default => 'Link description'),
+          :placeholder => t('.link_descr_placeholder', :default => 'This is my nice link about something hugely awesome!')
+      %div
+        = f.submit t('.new_link', :default => 'Cut it!')
+  .large-2.pull-10.columns
+    = render 'navigation'
+
+

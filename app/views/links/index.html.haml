@@ -1,0 +1,15 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'list', :text => t('.title', :default => 'Your links')
+    %hr
+
+.row
+  .large-10.push-2.columns
+    = render 'list'
+  .large-2.pull-10.columns
+    = render 'navigation'
+

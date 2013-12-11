@@ -1,0 +1,26 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'user', :text => t('.sign_up', :default => 'Sign up')
+    %hr
+
+.row
+  .small-12.large-6.push-6.columns
+    .panel
+      %p
+        = t('.sign_up_txt')
+  .small-12.large-6.pull-6.columns
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      %div
+        = f.email_field :email, :label => t('.email', :default => 'Email')
+      %div
+        = f.password_field :password, :label => t('.password', :default => 'Password')
+      %div
+        = f.password_field :password_confirmation, :label => t('.password_confirm', :default => 'Password confirmation')
+      .centered
+        = f.submit t('.sign_up', :default => 'Sign up')
+    %p
+      = render "devise/shared/links"

@@ -1,0 +1,49 @@
+es:
+  devise:
+    shared:
+      links:
+        sign_in                             : "Iniciar sesión"
+        sign_up                             : "Registrarse"
+    registrations:
+      new:
+        email                               : "Correo electrónico"
+        password                            : "Contraseña"
+        password_confirm                    : "Repite contraseña"
+        sign_up_now                         : "¡Regístrate ahora!"
+        sign_up_txt                         : "Una vez registrado podrás empezar a cortar todos los enlaces que encuentres, así como compartirlos de forma fácil y cómoda, además de llevar un control exhaustivo sobre las visitas que tu enlace acortado ha recibido."
+      edit:
+        edit_user                           : "Editar usuario"
+        password                            : "Contraseña"
+        password_confirm                    : "Repite contraseña"
+        password_current                    : "Contraseña actual"
+        cancel_my_account                   : "Borrar mi cuenta"
+        unhappy                             : "¿Quieres dejar cor.to?"
+        update                              : "Modificar"
+    sessions:
+      new:
+        sign_in                             : "Iniciar sesión"
+        email                               : "Correo electrónico"
+        password                            : "Contraseña"
+        remember                            : "Recordarme"
+    passwords:
+      new:
+        email                               : "Correo electrónico"
+        forgot_your_password                : "¿Has olvidado tu contraseña?"
+        send_me_reset_password_instructions : "Enviar instrucciones"
+      edit:
+        change_your_password                : "Cambia tu contraseña"
+        new_password                        : "Nueva contraseña"
+        confirm_new_password                : "Repite nueva contraseña"
+        change_my_password                  : "Cambiar"
+    confirmations:
+      new:
+        email                               : "Correo electrónico"
+        resend                              : "Reenviar"
+        resend_confirmation_instructions    : "Reenviar instrucciones de confirmación"
+    mailer:
+      reset_password_instructions:
+        instruction                         : "Alguien ha solicitado recuperar su contraseña, si lo desea puede completar dicha acción a través del siguiente enlace:"
+        action                              : "Restablecer contraseña"
+        instruction_2                       : "Si no lo ha solicitado usted, ignore este correo electrónico."
+      confirmation_instructions:
+        instruction                         : "Puede confirmar el correo electrónico de su cuenta a través del siguiente enlace:"

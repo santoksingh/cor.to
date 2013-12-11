@@ -1,0 +1,58 @@
+$header-color   : #ffffff;
+$header-bg      : #262626;
+$header-link-bg : #2ba8cb;
+
+header {
+    background : $header-bg;
+
+    .top-bar-section {
+        ul li:hover > a,
+        ul.dropdown li a:hover:not(.button),
+        ul li.active > a {
+            // !important necesario porque el selector de foundation tiene
+            // precedencia sobre este, aunque se incluya este css despues (debe
+            // tener mas clases el de foundation, no he mirado en su codigo
+            // fuente)
+            background : $header-link-bg !important;
+            color      : $header-color   !important;
+        }
+    }
+}
+
+.top-bar {
+    background    : none;
+    height        : 42px;
+    line-height   : 42px;
+    margin-bottom : 0;
+
+    .name    { @extend .top-bar; }
+    .name h1 { @extend .top-bar; }
+}
+
+.top-bar.expanded .title-area { background : $header-bg; }
+
+.top-bar-section {
+    ul {
+        background     : none;
+        text-transform : uppercase;
+    }
+
+    li a:not(.button) {
+        background         : none;
+        line-height        : 42px;
+        padding            : 0 27px;
+        -webkit-transition : all .7s ease;
+        -moz-transition    : all .7s ease;
+        -ms-transition     : all .7s ease;
+        -o-transition      : all .7s ease;
+        transition         : all .7s ease;
+    }
+
+    ul.dropdown {
+        background : $header-link-bg;
+        color      : $header-color;
+    }
+}
+
+
+

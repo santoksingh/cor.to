@@ -1,0 +1,10 @@
+es:
+  header:
+    home    : "Home"
+    menu    : "Menu"
+    links   : "Links"
+    user    : "User"
+    close   : "Close"
+    start   : "Home"
+    sign_in : "Sign in"
+    sign_up : "Sign up"

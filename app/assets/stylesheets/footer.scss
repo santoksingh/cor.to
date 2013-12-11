@@ -1,0 +1,21 @@
+@import "compass/layout.scss";
+
+$footer-bg     : #262626;
+$footer-color  : #ffffff;
+$footer-height : 40px;
+
+@include sticky-footer($footer-height, "#container", "#container_footer", "#footer");
+
+#container-footer { height: $footer-height; }
+
+#footer {
+    background : $footer-bg;
+    color      : $footer-color;
+    font-size  : 0.7em;
+    padding    : 15px 0 0 0;
+    box-shadow : 0 -5px 3px #ccc;
+
+    .copyright, .languages, .credits {
+        margin: 0 5px 0 5px;
+    }
+}

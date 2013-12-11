@@ -1,0 +1,42 @@
+%section.banner-area.full-width
+  = render 'banner'
+
+= render 'layouts/messages'
+
+%section.register
+  .row
+    .small-12.columns.centered
+      %h3
+        = t('.start_now')
+      %h5
+        = t('.signup_txt')
+      %p
+        = link_to t('.sign_up'), new_user_registration_path, :class => 'radius button alert animated signup-button'
+
+%section.icons-area
+  .row
+    .small-12.large-4.columns.icon-box.centered.animated
+      .icon-img
+        = fa_stacked_icon 'scissors', :base => 'circle'
+      .icon-msg
+        %h4
+          = t('.cut')
+        %p
+          = t('.cut_txt')
+    .small-12.large-4.columns.icon-box.centered.animated
+      .icon-img
+        = fa_stacked_icon 'group', :base => 'circle'
+      .icon-msg
+        %h4
+          = t('.share')
+        %p
+          = t('.share_txt')
+    .small-12.large-4.columns.icon-box.centered.animated
+      .icon-img
+        = fa_stacked_icon 'bar-chart-o', :base => 'circle'
+      .icon-msg
+        %h4
+          = t('.control')
+        %p
+          = t('.control_txt')
+

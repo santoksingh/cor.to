@@ -1,0 +1,21 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = t('.change_your_password', :default => 'Change your password')
+    %hr
+
+.row
+  .small-12.large-6.small-centered.columns
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+      = f.hidden_field :reset_password_token
+      %div
+        = f.password_field :password, :label => t('.new_password', :default => 'New password')
+      %div
+        = f.password_field :password_confirmation, :label => t('.confirm_new_password', :default => 'Confirm new password')
+      .centered
+        = f.submit t('.change_my_password', :default => 'Change my password')
+    %p
+      = render "devise/shared/links"

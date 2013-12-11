@@ -1,0 +1,29 @@
+
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'edit', :text => t('.title', :default => 'Edit link')
+    %h6.subheader.centered
+      = @link.title
+    %hr
+
+.row
+  .large-10.push-2.columns
+    = form_for @link do |f|
+      %div
+        = f.text_field :title,
+          :label => t('.link_title', :default => 'Link title'),
+          :placeholder => t('.link_title_placeholder', :default => 'Awesome link!')
+      %div
+        = f.text_area :description,
+          :placeholder => t('.link_descr_placeholder', :default => 'This is my nice link about something hugely awesome!')
+      %div
+        = f.submit t('.edit_link', :default => 'Update'), :class => 'radius small button'
+        = link_to t('.back_link', :default => 'Cancel'), @link, :class => 'radius small button secondary'
+  .large-2.pull-10.columns
+    = render 'navigation'
+
+

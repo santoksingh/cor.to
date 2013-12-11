@@ -1,0 +1,8 @@
+en:
+  devise:
+    registrations:
+      new:
+        sign_up_now : "Sign up now!"
+        sign_up_txt : "Once signed up, you can start to cut all links you find, as well as share them the easy way and get statistical data about all the visits your cutted down link has received."
+      edit:
+        edit_user   : "Edit user"

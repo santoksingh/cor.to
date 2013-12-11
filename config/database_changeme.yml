@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: corto_development
+  pool: 5
+  username: 'username'
+  password: 'password'
+
+test: &test
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: corto_test
+  pool: 5
+  username: 'username'
+  password: 'password'
+
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: corto
+  pool: 5
+  username: 'username'
+  password: 'password'
+
+cucumber:
+  <<: *test

@@ -1,0 +1,168 @@
+/* TODO: copiado directamente del css entregado en la plantilla, organizar el
+ * css correctamente haciendo uso de las caracteristicas que ofrece sass
+ * (variables, herencia, etc...) */
+
+/* BANNER */
+.banner-area {
+    background    : #ccc url(image_path('banner.jpg')) repeat left center;
+    margin-bottom : 25px;
+}
+
+.banner-area .orbit-container {
+    background : none;
+}
+
+.banner-area .orbit-slide-number {
+    display : none;
+}
+
+.orbit-container .orbit-timer {
+    position : absolute;
+    top      : 0;
+    height   : 5px;
+    width    : 100%;
+}
+
+.orbit-container .orbit-timer .orbit-progress {
+    background : rgba(204, 204, 204, 0.6);
+}
+
+.orbit-bullets {
+    text-align : center;
+    display    : block;
+    position   : relative;
+}
+
+.orbit-bullets li {
+    float   : none;
+    display : inline-block;
+    opacity : 0.7;
+    cursor  : pointer;
+}
+
+.orbit-slides-container li {
+    position           : absolute;
+    left               : 0;
+    right              : 0;
+    opacity            : 0.0;
+    -webkit-transition : all 2s ease;
+    -moz-transition    : all 2s ease;
+    -ms-transition     : all 2s ease;
+    -o-transition      : all 2s ease;
+    transition         : all 2s ease;
+}
+
+.orbit-slides-container li.active {
+    opacity : 1.0;
+}
+
+.orbit-box {
+    padding : 40px 0 5px;
+}
+
+.orbit-details {
+    top : 50px;
+}
+
+.orbit-details h2,
+.orbit-details h4 {
+    color       : #fff;
+    font-weight : bold;
+    text-shadow : 1px 1px 1px #aaa;
+}
+
+.orbit-details p {
+    color       : #fff;
+    text-shadow : 1px 1px 1px #aaa;
+}
+
+.orbit-image {
+    text-align : center;
+}
+
+.orbit-container .orbit-slides-container img {
+    display : inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+    .orbit-box {
+        padding : 0;
+    }
+
+    .orbit-details {
+        top        : 10px;
+        text-align : center;
+    }
+}
+
+/* REGISTRO */
+.register {
+    margin  : 20px 0;
+    padding : 10px 0;
+}
+
+.register .button-red {
+    background   : #ff4b2f;
+    border-color : #a6240f;
+    color        : #fff;
+}
+
+.register .button-red:hover {
+    -webkit-animation-name : tada;
+    -moz-animation-name    : tada;
+    -ms-animation-name     : tada;
+    -o-animation-name      : tada;
+    animation-name         : tada;
+}
+
+/* ICONOS */
+.icons-area {
+    padding : 10px 0 0;
+}
+
+.icon-box {
+    margin-bottom  : 10px;
+    border-bottom  : 1px #D8D8D8 dashed;
+    padding-bottom : 20px;
+    border-bottom  : none;
+}
+
+.icon-img {
+    color         : #2ba8cb;
+    font-size     : 60px;
+    line-height   : 60px;
+    cursor        : default;
+}
+
+.icon-img .fa-stack-1x {
+    color : #fff !important;
+}
+
+.icon-box:hover {
+    -webkit-animation-name : pulse;
+    -moz-animation-name    : pulse;
+    -ms-animation-name     : pulse;
+    -o-animation-name      : pulse;
+    animation-name         : pulse;
+}
+
+.icon-box:hover .icon-img {
+    color : #262626;
+}
+
+/* BARRA DE NAVEGACION */
+.navbar-area .sub-nav {
+    margin : 5px auto;
+}
+
+.navbar-area .sub-nav .active a {
+    background : #2ba8cb;
+}
+
+.signup-button:hover {
+    -webkit-animation-name : tada;
+    -moz-animation-name    : tada;
+    -ms-animation-name     : tada;
+    -o-animation-name      : tada;
+    animation-name         : tada;
+}

@@ -1,0 +1,36 @@
+@import "foundation_and_overrides";
+@import "font-awesome";
+@import "animate.css";
+@import "header";
+@import "footer";
+
+$title-color : #353535;
+$link-color  : #2ba8cb;
+
+html, body {
+    margin : 0;
+    height : 100%;
+}
+
+.full-width {
+    min-width : 100%;
+    position  : relative;
+}
+
+.centered { text-align : center; }
+
+h1, h2, h3, h4, h5, h6 {
+    color       : $title-color;
+    font-weight : 300;
+    line-height : 1.5em;
+}
+
+h3 { text-shadow : 2px 2px 2px #ddd; }
+
+.banner-area {
+    border-bottom : 10px solid $link-color;
+    margin-bottom : 25px;
+    box-shadow    : 0 5px 3px #ccc;
+}
+
+.button { background-color: $link-color; }

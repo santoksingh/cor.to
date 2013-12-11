@@ -1,0 +1,56 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'link', :text => @link.title
+    %h6.subheader.centered
+      = @link.out_url
+    %hr
+.row
+  .large-10.push-2.columns
+    .row
+      .small-12.columns.panel
+        = render 'link_info', :link => @link
+    -# TODO: hacer esto mas bonito
+    .row
+      .small-12.columns.panel
+        - if @link.clicks.empty?
+          .small-12.columns
+            %h6.centered
+              = t('.no_clicks_yet', :default => 'Nobody has visited your short link yet!')
+        - else
+          .small-12.columns
+            %h6
+              = t('.last_week', :default => 'Last week clicks')
+            %div
+              = column_chart week_clicks_path
+          .small-12.large-6.columns
+            %h6
+              = t('.last_month', :default => 'Last month clicks')
+            %div
+              = line_chart month_clicks_path
+          .small-12.large-6.columns
+            %h6
+              = t('.last_year', :default => 'Last year clicks')
+            %div
+              = area_chart year_clicks_path
+          .small-12.large-6.columns
+            %h6
+              = t('.browser', :default => 'Visitor browser')
+            %div
+              = pie_chart browser_clicks_path
+          .small-12.large-6.columns
+            %h6
+              = t('.country', :default => 'Visitor country')
+            %div
+              = pie_chart country_clicks_path
+          .small-12.columns
+            %h6
+              = t('.referer', :default => 'Visitor link referer')
+            %div
+              = bar_chart referer_clicks_path
+
+  .large-2.pull-10.columns
+    = render 'navigation'

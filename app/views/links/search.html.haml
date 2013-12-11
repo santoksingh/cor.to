@@ -1,0 +1,27 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'search', :text => t('.title', :default => 'Search link')
+    %hr
+
+.row
+  .large-10.push-2.columns
+    .row
+      .small-12.columns.panel
+        = form_tag search_links_path, :method => 'get' do
+          %div
+            = text_field_tag :term, params[:term],
+              :placeholder => t('.link_search_placeholder', :default => 'Search terms'),
+              :onclick => 'this.select();'
+          %div
+            = submit_tag t('.search', :default => 'Search'), :class => 'radius small button'
+      .row
+        .small-12.columns
+          = render 'list'
+
+  .large-2.pull-10.columns
+    = render 'navigation'
+

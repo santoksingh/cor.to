@@ -1,0 +1,37 @@
+%section.banner-area.full-width
+= render 'layouts/messages'
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'user', :text => t('.edit_user', :default => 'Edit user')
+    %hr
+
+.row
+  .small-12.large-6.small-centered.columns
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+      %div
+        = f.password_field :password, :autocomplete => "off", :label => t('.password', :default => 'Password')
+      %div
+        = f.password_field :password_confirmation, :label => t('.password_confirm', :default => 'Password confirmation')
+      %div
+        = f.password_field :current_password, :label => t('.password_current', :default => 'Current password')
+      .centered
+        = f.submit t('.update', :default => 'Update')
+
+.row
+  .small-12.columns
+    %h3.centered
+      = fa_icon 'trash-o', :text => t('.cancel_my_account', :default => 'Cancel my account')
+    %hr
+
+.row
+  .small-12.large-6.small-centered.columns
+    %p.centered
+      = t('.unhappy', :default => 'Unhappy?')
+    %p.centered
+      = link_to t('.cancel_my_account', :default => 'Cancel my account'),
+        registration_path(resource_name),
+        :data => { :confirm => t('.are_you_sure', :default => 'Are you sure?') },
+        :method => :delete,
+        :class => 'small radius alert button'

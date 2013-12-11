@@ -1,0 +1,12 @@
+- if not @links.empty?
+  .list-area.section-container.accordion{ 'data-section' => 'accordion' }
+    - @links.each do |link|
+      %section
+        %p.title{ 'data-section-title' => '' }
+          = link_to highlight(link.title, @highlight), '#'
+        .content{ 'data-section-content' => '' }
+          = render 'link_info', :link => link
+  .row
+    .small-12.small-centered.columns
+      .pagination-centered
+        = foundation_paginate @links

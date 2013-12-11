@@ -1,0 +1,20 @@
+es:
+  home:
+    banner:
+      title1      : "Recorta tus enlaces"
+      subtitle1   : "Porque el tamaño sí que importa"
+      text1       : "Siempre que quieras compartir un enlace con alguno de tus contactos, y no dispongas del espacio suficiente para hacerlo, Cor.to te ofrecerá la posibilidad de recortarlo en incrustarlo donde querías de la manera más sencilla que encontrarás en toda la red."
+      title2      : "En cualquier parte"
+      subtitle2   : "Porque la vida no es estática"
+      text2       : "Cor.to presenta una interfaz adaptable para cualquier tipo de dispositivo. Así podrás recortar, revisar y compartir cualquier enlace desde tu móvil y tablet del mismo modo que lo harías desde un PC."
+      responsive  : "Disponible para Smartphones, Tablets y PCs"
+    index:
+      start_now   : "Empieza a compartir cosas interesantes"
+      signup_txt  : "Tras registrarte, de forma totalmente gratuita, podrás recortar y compartir cualquier enlace que conozcas, así como llevar un control exhaustivo de las estadísticas de acceso a los mismos."
+      sign_up     : "Registrarse"
+      cut         : "Corta"
+      cut_txt     : "Reduce la longitud de cualquier enlace web que conozcas."
+      share       : "Comparte"
+      share_txt   : "Envía a través de tus redes sociales favoritas los enlaces recortados."
+      control     : "Controla"
+      control_txt : "Obtén datos estadísticos sobre las visitas que tu enlace ha recibido."

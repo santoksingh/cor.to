@@ -1,0 +1,20 @@
+en:
+  home:
+    banner:
+      title1      : "Cut down your links"
+      subtitle1   : "Because size does matter"
+      text1       : "Whenever you want to share a link with anyone of your contacts, and you don't have enough space to do it, Cor.to wil offer you the chance to cut it down and embed it where you want the easiest way you will find all over the net."
+      title2      : "Everywhere you go"
+      subtitle2   : "Because life is not static"
+      text2       : "Cor.to presents an adaptable interface for any type of device. In that way, you will be able to cut down, look at and share any link from your smartphone or tablet in the same way you would do it from a PC."
+      responsive  : "Available for Smartphones, Tablets and PCs"
+    index:
+      start_now   : "Start to share some interesting stuff"
+      signup_txt  : "After you sign up, totally free, you will be able to cut and share any link you know, as well as keep track of their access statistics"
+      sign_up     : "Sign up now"
+      cut         : "Cut"
+      cut_txt     : "Reduce the length of any web link you know."
+      share       : "Share"
+      share_txt   : "Send those shortened links across your favorite social networks."
+      control     : "Control"
+      control_txt : "Get statistical data about the visits your link has received."

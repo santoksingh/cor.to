@@ -1,0 +1,18 @@
+%section.banner-area.full-width
+  = render 'layouts/messages'
+.row
+  .small-12.columns
+    %h3.centered
+      = t('.resend_confirmation_instructions', :default => 'Resend confirmation instructions')
+    %hr
+
+.row
+  .small-12.large-6.small-centered.columns
+    = form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f|
+      = devise_error_messages!
+      %div
+        = f.email_field :email
+      .centered
+        = f.submit t('.resend', :default => 'Resend')
+    %p
+      = render "devise/shared/links"
